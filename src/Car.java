@@ -65,7 +65,7 @@ public class Car {
 
     public void setBrand(String brand) {
         if (brand == null || brand.equals("")) {
-            brand = "default";
+            this.brand = "default";
         } else {
             this.brand = brand;
         }
@@ -78,7 +78,7 @@ public class Car {
 
     public void setModel(String model) {
         if (model == null || model.equals("")) {
-            model = "default";
+            this.model = "default";
         } else {
             this.model = model;
         }
@@ -102,7 +102,7 @@ public class Car {
 
     public void setColor(String color) {
         if (color == null || color.equals("")) {
-            color = "белый";
+            this.color = "белый";
         } else {
             this.color = color;
         }
@@ -114,7 +114,7 @@ public class Car {
 
     public void setYear(Integer year) {
         if (year == 0) {
-            year = 2000;
+            this.year = 2000;
         } else {
             this.year = year;
         }
@@ -126,7 +126,7 @@ public class Car {
 
     public void setCountry(String country) {
         if (country == null || country.equals("")) {
-            country = "default";
+            this.country = "default";
         } else {
             this.country = country;
         }
