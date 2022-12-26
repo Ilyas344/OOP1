@@ -9,12 +9,32 @@ public class Car {
     String country;
 
     public Car(String brand, String model, Double engineVolume, String color, Integer year, String country) {
-        this.brand = brand;
-        this.model = model;
+        if (brand == null || brand.equals("")) {
+            this.brand = "default";
+        } else {
+            this.brand = brand;
+        }
+        if (model == null || model.equals("")) {
+            this.model = "default";
+        } else {
+            this.model = model;
+        }
         this.engineVolume = engineVolume;
-        this.color = color;
-        this.year = year;
-        this.country = country;
+        if (color == null || color.equals("")) {
+            this.color = "белый";
+        } else {
+            this.color = color;
+        }
+        if (year == null) {
+            this.year = 2000;
+        } else {
+            this.year = year;
+        }
+        if (country == null || country.equals("")) {
+            this.country = "default";
+        } else {
+            this.country = country;
+        }
     }
 
     @Override
@@ -46,8 +66,9 @@ public class Car {
     public void setBrand(String brand) {
         if (brand == null || brand.equals("")) {
             brand = "default";
+        } else {
+            this.brand = brand;
         }
-        this.brand = brand;
     }
 
     public String getModel() {
@@ -58,8 +79,9 @@ public class Car {
     public void setModel(String model) {
         if (model == null || model.equals("")) {
             model = "default";
+        } else {
+            this.model = model;
         }
-        this.model = model;
     }
 
     public Double getEngineVolume() {
@@ -81,8 +103,9 @@ public class Car {
     public void setColor(String color) {
         if (color == null || color.equals("")) {
             color = "белый";
+        } else {
+            this.color = color;
         }
-        this.color = color;
     }
 
     public Integer getYear() {
@@ -90,10 +113,11 @@ public class Car {
     }
 
     public void setYear(Integer year) {
-        if (year == null) {
+        if (year == 0) {
             year = 2000;
+        } else {
+            this.year = year;
         }
-        this.year = year;
     }
 
     public String getCountry() {
@@ -103,7 +127,8 @@ public class Car {
     public void setCountry(String country) {
         if (country == null || country.equals("")) {
             country = "default";
+        } else {
+            this.country = country;
         }
-        this.country = country;
     }
 }
